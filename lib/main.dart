@@ -51,16 +51,25 @@ class _MyAppState extends State<MyApp> {
                       Container(
                         margin: EdgeInsets.all(10),
                         height: 60,
-                        color: Colors.green,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.green,
+                        ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              "Bomdod:",
-                              style: TextStyle(color: Colors.white),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "Bomdod:",
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
-                            Text(snapshot.data!.data!.timings!.fajr.toString(),
-                                style: TextStyle(color: Colors.white)),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(snapshot.data!.data!.timings!.fajr.toString(),
+                                  style: TextStyle(color: Colors.white)),
+                            ),
                           ],
                         ),
                       ),
